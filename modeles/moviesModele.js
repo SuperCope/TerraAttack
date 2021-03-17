@@ -21,8 +21,11 @@ fetch(url)
 
 
 
-url = 'http://localhost:3000/api/movies/3';
-fetch(url)
+url = 'http://localhost:3000/api/movies/1';
+var options = {
+	method: 'GET',
+};
+fetch(url,options)
 .then(function(response) {
   // Récupérer le corps de la requete en JSON
 
@@ -40,7 +43,7 @@ let data = {
     author: 'jean'
 };
 // Les options de la requete
-let options = {
+options = {
 	method: 'POST',
     body: JSON.stringify(data)
 
@@ -61,7 +64,7 @@ fetch(url, options)
 
 // l'URL du Service Web
 console.log("3/ SUPPRESSION")
-url = 'http://localhost:3000/api/movies/14';
+url = 'http://localhost:3000/api/movies/3';
 // Les options de la requete
 options = {
 	method: 'DELETE',
@@ -75,7 +78,7 @@ fetch(url, options)
 
 
 
-url = 'http://localhost:3000/api/movies/8';
+url = 'http://localhost:3000/api/movies/2';
 data = {
     title: 'modified', 
     author: 'nameModified'

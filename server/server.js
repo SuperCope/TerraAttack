@@ -1,5 +1,5 @@
 import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
-import { router } from './movies.js'
+import { router } from '../controllers/moviesController.js'
 
 const app = new Application();
 const port = 3000;
@@ -16,4 +16,4 @@ app.use(async (ctx, next) => {
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen({ port })
-console.log("DONE")
+console.log("*********SERVEUR LISTENING***********")

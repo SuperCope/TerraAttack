@@ -8,6 +8,16 @@ movies.set("1", {
     title: "Star Wars",
     author: "Lucas Films"
 })
+movies.set("2", {
+    id: "2",
+    title: "Bof",
+    author: "Mon film"
+})
+movies.set("3", {
+    id: "3",
+    title: "Les 3 cons",
+    author: "Moi"
+})
 
 router
     .get('/api', (ctx) =>{
@@ -19,6 +29,7 @@ router
     .get('/api/movies/:id', (ctx) => {
         if (ctx.params && ctx.params.id && movies.has(ctx.params.id)) {
             ctx.response.body = movies.get(ctx.params.id)
+            console.log(ctx.response.body)
         }  
     })
     .post("/api/movies", async ({ response, request }) => {

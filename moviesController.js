@@ -56,7 +56,7 @@ router
         console.log(movies.has(id.id))
         if (movies.has(String(id.id))) {
             console.log("ACCES")
-            movies.set(id.id, { id: String(id.id), title: val.title, author: val.author })
+            movies.set(id.id, {title: val.title, author: val.author })
             console.log("ACCES 2 ")
             console.log(movies)
             response.body = movies.get(id.id)

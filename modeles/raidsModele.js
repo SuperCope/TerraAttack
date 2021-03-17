@@ -6,7 +6,7 @@ let headers = {
   "Content-type": "application/json; charset=UTF-8"
 };
 
-let url = 'http://localhost:3000/api/movies';
+let url = 'http://localhost:3000/api/raids';
 fetch(url)
 .then(function(response) {
   // Récupérer le corps de la requete en JSON
@@ -21,7 +21,7 @@ fetch(url)
 
 
 
-url = 'http://localhost:3000/api/movies/1';
+url = 'http://localhost:3000/api/raids/1';
 var options = {
 	method: 'GET',
 };
@@ -39,8 +39,11 @@ fetch(url,options)
 
 
 let data = {
-    title: 'foo', 
-    author: 'jean'
+    nom: "Raid Test",
+    temps: "20",
+    mobs: [1,2,3,4],
+    pointVies: "100",
+    type: "2"
 };
 // Les options de la requete
 options = {
@@ -64,7 +67,7 @@ fetch(url, options)
 
 // l'URL du Service Web
 console.log("3/ SUPPRESSION")
-url = 'http://localhost:3000/api/movies/3';
+url = 'http://localhost:3000/api/raids/3';
 // Les options de la requete
 options = {
 	method: 'DELETE',
@@ -78,10 +81,13 @@ fetch(url, options)
 
 
 
-url = 'http://localhost:3000/api/movies/2';
+url = 'http://localhost:3000/api/raids/2';
 data = {
-    title: 'modified', 
-    author: 'nameModified'
+    nom: "Raid Test 2",
+    temps: "20",
+    mobs: [1,2,3,4],
+    pointVies: "100",
+    type: "2"
 };
 // Les options de la requete
 options = {

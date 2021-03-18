@@ -1,10 +1,12 @@
 import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
 import { Villages } from '../controllers/villagesController.js'
 import { Raids } from '../controllers/raidsController.js'
+import { Items } from '../controllers/itemsController.js'
 
 var router = new Router()
 var villagesController = new Villages(router);
 var raidsController = new Raids(villagesController.getRouter());
+var itemsController = new Items(raidsController.getRouter());
 
 router = raidsController.getRouter()
 

@@ -31,7 +31,7 @@ class Villages {
                 }
                 console.log(val)
                 this.villages.set(String(this.villages.size + 1), {
-                    id: String(this.villages.size + 1),
+                    id: (this.villages.size + 1),
                     nom: val.nom,
                     nbHabitants: val.nbHabitants,
                     pointVies: val.pointVies,

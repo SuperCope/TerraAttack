@@ -31,7 +31,7 @@ class Items {
                 }
                 console.log(val)
                 this.Items.set(String(this.Items.size + 1), {
-                    id: String(this.Items.size + 1),
+                    id: (this.Items.size + 1),
                     nom: val.nom,
                     cout: val.cout,
                     nbBois: val.nbBois,

@@ -31,7 +31,7 @@ class Raids {
                 }
                 console.log(val)
                 this.raids.set(String(this.raids.size + 1), {
-                    id: String(this.raids.size + 1),
+                    id: (this.raids.size + 1),
                     nom: val.nom,
                     temps: val.temps,
                     mobs: val.mobs,

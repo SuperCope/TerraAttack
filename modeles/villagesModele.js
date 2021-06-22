@@ -25,7 +25,7 @@ url = 'http://localhost:3000/api/villages/1';
 var options = {
 	method: 'GET',
 };
-fetch(url,options)
+fetch(url, options)
 .then(function(response) {
   // Récupérer le corps de la requete en JSON
 

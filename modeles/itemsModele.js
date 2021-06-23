@@ -1,66 +1,79 @@
-const fetch = require("node-fetch");
-
-
-
-let headers = {
-  "Content-type": "application/json; charset=UTF-8"
-};
-
-let url = 'http://localhost:3000/api/items';
-fetch(url)
-.then(function(response) {
-  // Récupérer le corps de la requete en JSON
-
-  return response.json();
-})
-.then(function (json) {
-    console.log("1) AFFICHAGE")
-    console.log(json)
-  // Utiliser notre objet JSON
-})
-
-
-
-url = 'http://localhost:3000/api/items/1';
+var url = 'http://localhost:3000/api/items/1';
 var options = {
-	method: 'GET',
+    method: 'GET'
 };
-fetch(url,options)
-.then(function(response) {
-  // Récupérer le corps de la requete en JSON
-
-  return response.json();
-})
-.then(function (json) {
-    console.log("5) AFFICHAGE SPECIFIQUE")
-    console.log(json)
-  // Utiliser notre objet JSON
-})
 
 
+url = 'http://localhost:3000/api/items/';
 let data = {
-    nom: "Raid Test",
-    temps: "20",
-    mobs: [1,2,3,4],
-    pointVies: "100",
-    type: "2"
+    id: 5,
+    nom: "ESSAI",
+    cout: 10,
+    nbBois: 1,
+    nbOr: 2,
+    nbArgile: 0,
+    nbNourriture: 0,
+    nbPierre: 0,
+    nbMetal1: 0,
+    nbMetal2: 0,
+    nbMetal3: 0,
+    nbMetal4: 0,
+    nbMetal5: 0,
+    nbMetal6: 0,
+    nbBois1: 0,
+    nbBois2: 0,
+    nbBois3: 0,
+    nbBois4: 0,
+    nbBois5: 455,
+    idEffets: 3
 };
 // Les options de la requete
 options = {
-	method: 'POST',
+    method: 'POST',
     body: JSON.stringify(data)
-
 };
 console.log("2) AJOUT DE :")
 console.log(data)
 fetch(url, options)
-.then(function (response) {
+    .then(function (response) {
 // Le résultat du POST
-})
-.then(function (json) {
+    })
+    .then(function (json) {
 
 // Utiliser notre objet JSON
-})
+    })
+
+
+options = {
+    method: 'GET',
+};
+url = 'http://localhost:3000/api/items/1';
+fetch(url, options)
+    .then(function(response) {
+        // Récupérer le corps de la requete en JSON
+
+        return response.json();
+    })
+    .then(function (json) {
+        console.log("5) AFFICHAGE SPECIFIQUEE")
+        console.log(json)
+        // Utiliser notre objet JSON
+    })
+
+url = 'http://localhost:3000/api/items';
+
+fetch(url)
+    .then(function(response) {
+        // Récupérer le corps de la requete en JSON
+        return response.json();
+    })
+    .then(function (json) {
+        console.log("1) AFFICHAGE")
+        console.log(json)
+        // Utiliser notre objet JSON
+    })
+
+
 
 
 
@@ -72,7 +85,7 @@ url = 'http://localhost:3000/api/items/3';
 options = {
 	method: 'DELETE',
 };
- 
+
 fetch(url, options)
 .then(function(response) {
 	// Le résultat du POST
@@ -81,13 +94,28 @@ fetch(url, options)
 
 
 
-url = 'http://localhost:3000/api/items/2';
+url = 'http://localhost:3000/api/items/1';
 data = {
-    nom: "Raid Test 2",
-    temps: "20",
-    mobs: [1,2,3,4],
-    pointVies: "100",
-    type: "2"
+    id: 5,
+    nom: "ESSAI MODIF",
+    cout: 10,
+    nbBois: 1,
+    nbOr: 2,
+    nbArgile: 0,
+    nbNourriture: 0,
+    nbPierre: 0,
+    nbMetal1: 0,
+    nbMetal2: 0,
+    nbMetal3: 0,
+    nbMetal4: 0,
+    nbMetal5: 0,
+    nbMetal6: 0,
+    nbBois1: 0,
+    nbBois2: 0,
+    nbBois3: 0,
+    nbBois4: 0,
+    nbBois5: 455,
+    idEffets: 3
 };
 // Les options de la requete
 options = {

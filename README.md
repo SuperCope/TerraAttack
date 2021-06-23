@@ -9,3 +9,11 @@ Aller dans le dossier serveur et exécuter la commande :
 
 3) Accèder à une table de la bdd:
    http://localhost:3000/api/ [nomDeLaTable]
+
+   headers: {'Content-Type' : 'application/json',
+   'Access-Control-Allow-Origin' : '*',
+   'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS',
+   'Access-Control-Allow-Origin' : 'http://localhost:3000',
+   'Access-Control-Allow-Credentials': true,
+   'Access-Control-Allow-Headers' : 'Origin, X-Requested-With, Content-Type, Accept, Options'
+   }

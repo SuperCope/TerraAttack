@@ -1,16 +1,12 @@
-const fetch = require("node-fetch");
-
-
-
 let headers = {
   "Content-type": "application/json; charset=UTF-8"
 };
 
 let url = 'http://localhost:3000/api/villages';
+
 fetch(url)
 .then(function(response) {
   // Récupérer le corps de la requete en JSON
-
   return response.json();
 })
 .then(function (json) {
@@ -23,7 +19,7 @@ fetch(url)
 
 url = 'http://localhost:3000/api/villages/1';
 var options = {
-	method: 'GET',
+	method: 'GET'
 };
 fetch(url, options)
 .then(function(response) {
@@ -51,6 +47,8 @@ let data = {
     idRempart: [],
     idPrisonnier: []
 };
+
+url = 'http://localhost:3000/api/villages/';
 // Les options de la requete
 options = {
 	method: 'POST',
@@ -67,8 +65,6 @@ fetch(url, options)
 
 // Utiliser notre objet JSON
 })
-
-
 
 
 // l'URL du Service Web

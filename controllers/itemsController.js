@@ -7,6 +7,7 @@ class Items {
         this.Items = new DataItems().getData()
 
         console.log(this.Items)
+
         this.routerItems
             .get('/api', (ctx) => {
                 ctx.response.body = "API WORKING"
@@ -23,7 +24,7 @@ class Items {
                 }
             })
             .post("/api/items", async({ response, request }) => {
-                console.log("OK")
+                console.log("OK HAHAHAH")
                 const values = await (request.body().value)
                 var val = values;
                 if (request.body().type == "text") {
@@ -50,9 +51,9 @@ class Items {
                     nbBois3: val.nbBois3,
                     nbBois4: val.nbBois4,
                     nbBois5: val.nbBois5,
-                    idEffets: []
+                    idEffets: val.idEffets
                 })
-                console.log(this.Items)
+                console.log("ET l'effet :"+val.idEffets)
                 response.body = Array.from(this.Items.values())
             })
             .patch("/api/items/:id", async({ response, request, params }) => {
@@ -86,7 +87,7 @@ class Items {
                         nbBois3: val.nbBois3,
                         nbBois4: val.nbBois4,
                         nbBois5: val.nbBois5,
-                        idEffets: []
+                        idEffets: val.idEffets
                     })
                     console.log("ACCES 2 ")
                     console.log(this.Items)

@@ -73,4 +73,4 @@ router
     })
 console.log("OK")
 
-export { router }
+export { Movie }

@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+
 
 
 
@@ -58,8 +58,35 @@ fetch(url, options)
 
 // Utiliser notre objet JSON
 })
+options = {
+    method: 'POST',
+    body: JSON.stringify(data)
+
+};
+console.log("2) AJOUT DE :")
+console.log(data)
+fetch(url, options)
+    .then(function (response) {
+// Le résultat du POST
+    })
+    .then(function (json) {
+
+// Utiliser notre objet JSON
+    })
 
 
+url = 'http://localhost:3000/api/movies';
+fetch(url)
+    .then(function(response) {
+        // Récupérer le corps de la requete en JSON
+
+        return response.json();
+    })
+    .then(function (json) {
+        console.log("1) AFFICHAGE")
+        console.log(json)
+        // Utiliser notre objet JSON
+    })
 
 
 // l'URL du Service Web

@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+
 
 
 
@@ -37,6 +37,7 @@ fetch(url,options)
   // Utiliser notre objet JSON
 })
 
+url = 'http://localhost:3000/api/raids';
 
 let data = {
     nom: "Raid Test",
